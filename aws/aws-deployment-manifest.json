@@ -1,0 +1,38 @@
+{
+    "manifestVersion": 1,
+    "deployments": {
+        "custom": [
+            {
+                "name": "AWS-EB-Bundle",
+                "description": "Template for creating an AWS EB Bundle",
+                "scripts":
+                {
+                    "preInstall": 
+                    {
+                        "file": "PreInstallSetup.ps1"
+                    },
+                    "postInstall":
+                    {
+                        "file": "PostInstallSetup.ps1"
+                    },
+                    "preRestart":
+                    {
+                        "file": "PreRestartSetup.ps1"
+                    },
+                    "postRestart":
+                    {
+                        "file": "PostRestartSetup.ps1"
+                    },
+                    "preUninstall":
+                    {
+                        "file": "PreUnInstallSetup.ps1"
+                    },
+                    "postUninstall":
+                    {
+                        "file": "PostUnInstallSetup.ps1"
+                    }
+                }
+            }
+        ]
+    }
+}
